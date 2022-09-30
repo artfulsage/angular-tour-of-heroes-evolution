@@ -10,8 +10,7 @@
   <button
     heroUpdater
     #heroUpdater="heroUpdater"
-    [hero]="hero"
-    (click)="heroUpdater.save()"
+    (click)="heroUpdater.save(hero)"
     (heroSaved)="close.emit($event)"
   >Save
   </button>

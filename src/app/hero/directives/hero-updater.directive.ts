@@ -8,15 +8,13 @@ import { tap } from 'rxjs/operators';
   exportAs: 'heroUpdater',
 })
 export class HeroUpdaterDirective {
-  @Input() hero: Hero;
-
   @Output() heroSaved = new EventEmitter<Hero>();
 
   constructor(private heroService: HeroService) {}
 
-  save(): void {
+  save(hero: Hero): void {
     this.heroService
-      .save(this.hero)
+      .save(hero)
       .pipe(tap((hero) => this.heroSaved.emit(hero)))
       .subscribe();
   }
