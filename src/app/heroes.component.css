@@ -10,7 +10,6 @@
   width: 15em;
 }
 .heroes li {
-  cursor: pointer;
   position: relative;
   left: 0;
   background-color: #EEE;
@@ -19,7 +18,12 @@
   height: 1.6em;
   border-radius: 4px;
 }
-.heroes li:hover {
+
+.heroes li:not(.disabled) {
+  cursor: pointer;
+}
+
+.heroes li:hover:not(.disabled) {
   color: #607D8B;
   color: rgb(0,120,215);
   background-color: #DDD;
@@ -54,12 +58,17 @@ button {
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
+}
+
+button:hover:not([disabled]) {
+  background-color: #cfd8dc;
+}
+
+button:not([disabled]) {
   cursor: pointer;
   cursor: hand;
 }
-button:hover {
-  background-color: #cfd8dc;
-}
+
 .error {color:red;}
 button.delete-button{
   float:right;
