@@ -24,8 +24,10 @@ h3 {
   width: 25%;
 }
 .module {
+	display: block;
 	padding: 20px;
 	text-align: center;
+	text-decoration: none;
 	color: #eee;
 	max-height: 120px;
 	min-width: 120px;
