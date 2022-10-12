@@ -4,7 +4,7 @@
 
   <div>
     <div
-      *ngFor="let hero of { name: name } | debounce: 250 | async | heroes | async"
+      *ngFor="let hero of { name: name | debounce: 250 } | heroes | async"
       (click)="gotoDetail(hero)" class="search-result"
     >
       {{hero.name}}
