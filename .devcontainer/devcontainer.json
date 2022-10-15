@@ -12,7 +12,7 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"angular.ng-template",
+				"angular.ng-template@14.1.0",
 				"dbaeumer.vscode-eslint",
 				"eamodio.gitlens"
 			]
